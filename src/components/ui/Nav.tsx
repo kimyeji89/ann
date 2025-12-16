@@ -20,9 +20,9 @@ const Nav = ({ isAdmin }: Props) => {
     <nav className="flex items-center space-x-2">
       {isAdmin === true
         ? navItems
-            // .filter(
-            //   (item) => item.label !== "내 목록" && item.label !== "작성하기"
-            // )
+            .filter(
+              (item) => item.label !== "내 목록" && item.label !== "작성하기"
+            )
             .map((item) => <LinkButton {...item} key={item.href} />)
         : navItems
             .filter(
